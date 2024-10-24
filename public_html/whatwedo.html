@@ -127,11 +127,132 @@
         .footer .list-inline-item a:hover {
             color: #007bff;
         }
+
+
+ /* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.services-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Service Cards Styling */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #3a7bd5;
+    margin-bottom: 1rem;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.service-description {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-description li {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 0.3rem 0;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect to show all points */
+.service-card:hover .service-description li {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.service-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #3a7bd5;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+    background-color: #2f6cc0;
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .service-card {
+        padding: 1rem;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-description li {
+        font-size: 0.85rem;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .service-button {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -146,7 +267,7 @@
         </div>
     </nav>
     <!-- End Of First Navigation -->
-    
+  
     <!-- Page Second Navigation -->
     <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-white sticky-top">
         <div class="container">
@@ -168,10 +289,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./whatwedo.html">What we do</a>
                     </li>
-    
+  
                     <li class="nav-item">
                         <a class="nav-link" href="./gallary.html">gallery</a>
-    
+  
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Contacts.html">Contacts</a>
@@ -199,6 +320,7 @@
             </div>
         </div>
     </nav>
+  
 
     <!-- Services Section -->
     <div class="services-section">
@@ -218,7 +340,7 @@
                     <li>Award Ceremonies</li>
                     <li>Dealer Meets</li>
                 </ul>
-                <a href="#" class="service-button">Learn More</a>
+              
             </div>
 
             <!-- Card 2 -->
@@ -235,7 +357,7 @@
                     <li>Door to Door Activities</li>
                     <li>Rural Promotions</li>
                 </ul>
-                <a href="#" class="service-button">Learn More</a>
+             
             </div>
 
             <!-- Card 3 -->
@@ -251,7 +373,7 @@
                     <li>Bus Ads</li>
                     <li>Look Walkers</li>
                 </ul>
-                <a href="#" class="service-button">Learn More</a>
+           
             </div>
 
             <!-- Card 4 -->
@@ -262,7 +384,7 @@
                     <li>Birthday Parties</li>
                     <li>Weddings & Associated Events</li>
                 </ul>
-                <a href="#" class="service-button">Learn More</a>
+           
             </div>
         </div>
     </div>
