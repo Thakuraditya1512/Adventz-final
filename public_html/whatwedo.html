@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What We Do | Adventz</title>
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/joeblog.css">
+    
+    <style>
+        /* Body styling */
+        body {
+            font-family: 'PT Serif', serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .navbar-brand img.logo {
+            max-width: 200px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 16px;
+            font-weight: 500;
+            padding: 10px 20px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        /* Services Section */
+        .services-section {
+            background-color: #6a0dad;
+            padding: 40px 0;
+        }
+
+        /* Grid layout for "What We Do" */
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Card style */
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect */
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: #ff6347;
+            margin-bottom: 20px;
+        }
+
+        .service-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .service-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .service-button {
+            font-size: 14px;
+            color: #ff6347;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .service-button:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .footer h6 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .footer p {
+            color: #6c757d;
+        }
+        
+        .footer .list-inline-item a {
+            color: #495057;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .footer .list-inline-item a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="./assets/imgs/logoad.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <h1>What We Do</h1>
+        <div class="services-container">
+            <!-- Card 1 -->
+            <div class="service-card">
+                <div class="service-icon">&#128188;</div> <!-- Placeholder icon -->
+                <h3 class="service-title">Events</h3>
+                <ul class="service-description">
+                    <li>Corporate Events</li>
+                    <li>Product Launches</li>
+                    <li>Conferences</li>
+                    <li>Seminars</li>
+                    <li>Fashion Shows</li>
+                    <li>Press Meets</li>
+                    <li>Award Ceremonies</li>
+                    <li>Dealer Meets</li>
+                </ul>
+                <a href="#" class="service-button">Learn More</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="service-card">
+                <div class="service-icon">&#128640;</div> <!-- Placeholder icon -->
+                <h3 class="service-title">Brand Activation</h3>
+                <ul class="service-description">
+                    <li>Promotions</li>
+                    <li>Road Shows</li>
+                    <li>Mall Activities</li>
+                    <li>Movie Promotions</li>
+                    <li>Store Activity</li>
+                    <li>Sales Promotions</li>
+                    <li>Door to Door Activities</li>
+                    <li>Rural Promotions</li>
+                </ul>
+                <a href="#" class="service-button">Learn More</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="service-card">
+                <div class="service-icon">&#127912;</div> <!-- Placeholder icon -->
+                <h3 class="service-title">Branding</h3>
+                <ul class="service-description">
+                    <li>In-Shop Branding</li>
+                    <li>Shop Gate Arches</li>
+                    <li>Front Lit Boards</li>
+                    <li>Acrylic ACP Boards</li>
+                    <li>Auto Ads</li>
+                    <li>Bus Ads</li>
+                    <li>Look Walkers</li>
+                </ul>
+                <a href="#" class="service-button">Learn More</a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="service-card">
+                <div class="service-icon">&#128142;</div> <!-- Placeholder icon -->
+                <h3 class="service-title">Social Events</h3>
+                <ul class="service-description">
+                    <li>Birthday Parties</li>
+                    <li>Weddings & Associated Events</li>
+                </ul>
+                <a href="#" class="service-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-white mt-5">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-4">
+                    <h6>About Adventz</h6>
+                    <p>Adventz is a leading media and marketing company committed to delivering excellent services in photography and event management. Our passion drives us to create memorable experiences for all our clients.</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-md-4">
+                    <h6>Contact Us</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="ti-location-pin"></i> 123 Event Road, City, Country</li>
+                        <li><i class="ti-mobile"></i> +91 99590 68980</li>
+                        <li><i class="ti-email"></i> contact@adventz.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media Links -->
+                <div class="col-md-4">
+                    <h6>Follow Us</h6>
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="#"><i class="ti-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="ti-instagram"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="ti-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="#"><i class="ti-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center py-3">
+                <p class="mb-0">&copy; 2024 Adventz Media. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/vendors/jquery/jquery.min.js"></script>
+    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
