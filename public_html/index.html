@@ -12,7 +12,71 @@
 	<link rel="stylesheet" href="assets/css/joeblog.css">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
+    <style>
+        /* Smooth transition CSS */
+        body.loaded .intro {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-out;
+        }
 
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full screen intro */
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 1s ease-out;
+        }
+
+        /* Logo with blur effect */
+        .intro img {
+            width: 150px;
+            height: auto;
+            filter: blur(20px);
+            opacity: 1;
+            animation: unblur 3s ease-out forwards;
+        }
+
+        /* Unblur animation */
+        @keyframes unblur {
+            0% {
+                filter: blur(20px);
+                opacity: 1;
+            }
+            100% {
+                filter: blur(0);
+                opacity: 1;
+            }
+        }
+
+        /* Main content - hidden initially */
+        .content {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 1s ease-out;
+        }
+
+        /* When page is loaded, content becomes visible */
+        body.loaded .content {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
    
 
         <style>
@@ -45,12 +109,14 @@
   </script> -->
   
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    
+    <div class="intro">
+        <img src="./assets/imgs/1212.png" alt="Logo">
+    </div>
     <!-- page First Navigation -->
     <nav class="navbar navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="./assets/imgs/logoad.png" alt="">
+                <img src="./assets/imgs/1212.png" alt="">
             </a>
             <div class="socials">
                 <a href="https://www.facebook.com/share/1wzxVG8Vbr1dvMXo/?mibextid=LQQJ4d" class="font-weight-bold text-muted mr-4"><i class="ti-facebook pr-1"></i> </a>
@@ -689,6 +755,8 @@
         </a>
     </div>
 
+
+
     <!-- Page Footer -->
     <footer class="page-footer">
         <div class="container">
@@ -709,103 +777,17 @@
         </div>      
     </footer>
 
+    <script>
+        window.onload = function() {
+            setTimeout(function() {
+                document.body.classList.add('loaded');
+            }, 3000); // 3 second delay for the blur effect
+        };
+    </script>
 
 
-<!-- Loading Screen -->
-<div id="loading-screen">
-    <img src="./assets/imgs/logoad.png" alt="Logo" id="loading-logo">
-</div>
-
-<!-- Main Content -->
-<div id="main-content" class="hidden">
-    <!-- Your website content goes here -->
-    <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-white sticky-top">
-        <div class="container">
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">                     
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./whatwedo.html">What we do</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./gallary.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="Contacts.html">Contacts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="your-login-link.html">Login</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</div>
-
-<!-- CSS for Loading Screen and Animation -->
-<style>
-    /* Loading Screen Styles */
-    #loading-screen {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-        transition: opacity 1s ease-in-out, filter 1.5s ease-in-out;
-    }
-
-    #loading-logo {
-        width: 200px;
-        animation: spin 3s ease-in-out forwards;
-    }
-
-    @keyframes spin {
-        0% { transform: scale(0.5) rotate(0deg); }
-        50% { transform: scale(1.2) rotate(180deg); }
-        100% { transform: scale(1) rotate(360deg); }
-    }
-
-    /* Main content styles */
-    #main-content.hidden {
-        display: none;
-    }
-
-    #main-content.visible {
-        display: block;
-        opacity: 0;
-        animation: fadeIn 1s forwards;
-    }
-
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-
-    /* Transition for blurring effect */
-    .blur-out {
-        opacity: 0;
-        filter: blur(10px);
-    }
-</style>
-
-<!-- JavaScript to Control Loading and Transition -->
-<script>
-    window.addEventListener("load", function() {
-        const loadingScreen = document.getElementById("loading-screen");
-        const mainContent = document.getElementById("main-content");
-
-        setTimeout(() => {
-            // Apply blur and fade-out effect to loading screen
-            loadingScreen.classList.add("blur-out");
-
-            // Delay showing the main content slightly after the blur
-            setTimeout(() => {
-                loadingScreen.style.display = "none"; // Hide loading screen completely
-                mainContent.classList.remove("hidden");
-                mainContent.classList.add("visible"); // Show main content with fade-in effect
-            }, 1500); // Adjust delay to match the blur duration
-        }, 3000); // Initial delay before blur effect starts (3 seconds)
-    });
-</script>
-
+    
+   
     <!-- End of Page Footer -->
 
 	<!-- core  -->
