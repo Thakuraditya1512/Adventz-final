@@ -708,6 +708,104 @@
             <p class="border-top mb-0 mt-4 pt-3 small">&copy; <script>document.write(new Date().getFullYear())</script>,  Created By <a href="https://images.pexels.com/photos/28972138/pexels-photo-28972138.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="text-muted font-weight-bold" target="_blank">7 Creators</a>  All rights reserved </p> 
         </div>      
     </footer>
+
+
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+    <img src="./assets/imgs/logoad.png" alt="Logo" id="loading-logo">
+</div>
+
+<!-- Main Content -->
+<div id="main-content" class="hidden">
+    <!-- Your website content goes here -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light bg-white sticky-top">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">                     
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./whatwedo.html">What we do</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./gallary.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacts.html">Contacts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="your-login-link.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<!-- CSS for Loading Screen and Animation -->
+<style>
+    /* Loading Screen Styles */
+    #loading-screen {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: opacity 1s ease-in-out, filter 1.5s ease-in-out;
+    }
+
+    #loading-logo {
+        width: 200px;
+        animation: spin 3s ease-in-out forwards;
+    }
+
+    @keyframes spin {
+        0% { transform: scale(0.5) rotate(0deg); }
+        50% { transform: scale(1.2) rotate(180deg); }
+        100% { transform: scale(1) rotate(360deg); }
+    }
+
+    /* Main content styles */
+    #main-content.hidden {
+        display: none;
+    }
+
+    #main-content.visible {
+        display: block;
+        opacity: 0;
+        animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    /* Transition for blurring effect */
+    .blur-out {
+        opacity: 0;
+        filter: blur(10px);
+    }
+</style>
+
+<!-- JavaScript to Control Loading and Transition -->
+<script>
+    window.addEventListener("load", function() {
+        const loadingScreen = document.getElementById("loading-screen");
+        const mainContent = document.getElementById("main-content");
+
+        setTimeout(() => {
+            // Apply blur and fade-out effect to loading screen
+            loadingScreen.classList.add("blur-out");
+
+            // Delay showing the main content slightly after the blur
+            setTimeout(() => {
+                loadingScreen.style.display = "none"; // Hide loading screen completely
+                mainContent.classList.remove("hidden");
+                mainContent.classList.add("visible"); // Show main content with fade-in effect
+            }, 1500); // Adjust delay to match the blur duration
+        }, 3000); // Initial delay before blur effect starts (3 seconds)
+    });
+</script>
+
     <!-- End of Page Footer -->
 
 	<!-- core  -->
