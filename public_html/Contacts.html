@@ -165,7 +165,10 @@
     <div class="page-content">
         <div class="contact-form">
             <h5>Get In Touch</h5>
-            <form id="contact-form" action="https://formsubmit.co/thakuradityasingh1512@gmail.com" method="POST">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="5521c946-c988-4fc3-9455-c3c859b9ea41">
+        
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
@@ -178,9 +181,17 @@
                     <label for="message">Message</label>
                     <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
                 </div>
+        
+                <!-- Honeypot Spam Protection -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+        
+                <!-- Optional Custom Confirmation Page -->
+                <!-- <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html"> -->
+        
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
+        
 
 
 
